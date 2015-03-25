@@ -7632,7 +7632,7 @@ a.button {
 
 #start {
   color: #FFF;
-  background-image: url('/img/starter.jpg');
+  background-image: url('../img/starter.jpg');
   background-size: cover;
   background-position: 55% 0; }
   #start > .scroll-content {
@@ -7785,7 +7785,7 @@ a.button {
   border-bottom: none; }
 
 .yritys-form {
-  background: url("/img/starter-bg.jpg") no-repeat 50% 50%;
+  background: url("../img/starter-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   padding: 20px 10px; }
   .yritys-form .item-input-inset .item-input-wrapper {
@@ -7818,7 +7818,7 @@ a.button {
     .tabs-top > .tabs .tab-title, .tabs.tabs-top .tab-title {
       font-size: 20px; }
   .yritys-form {
-    background: url("/img/starter-bg.jpg") no-repeat 50% 50%;
+    background: url("../img/starter-bg.jpg") no-repeat 50% 50%;
     background-size: cover;
     padding: 75px 20px; }
     .yritys-form .item-input-inset .item-input-wrapper {
