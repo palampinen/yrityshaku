@@ -403,6 +403,15 @@ angular.module('starter.controllers', [])
     }
 
 
+    $scope.linktype = function(type){
+      if(type=='Puhelin'||type=='Faksi')
+        return 'tel://'
+      if(type=='Kotisivun www-osoite')
+        return 'http://'
+      return '';
+    }
+
+
 
     $scope.close = function() {
       $scope.showMap = false;

@@ -36,7 +36,7 @@
         <div class="item item-divider">
           <i class="icon ion-ios-telephone-outline"></i> Yhteystiedot
         </div>
-        <a ng-repeat="contact in detail.contactDetails | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!contact.endDate&&contact.value" class="item" href="{{contact.value}}" target="_blank">
+        <a ng-repeat="contact in detail.contactDetails | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!contact.endDate&&contact.value" class="item" href="{{linktype(contact.type)}}{{contact.value}}" target="_blank">
           <span class="title">{{contact.type}}</span>
           {{contact.value}}    
         </a>
