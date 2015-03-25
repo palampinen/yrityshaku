@@ -44,7 +44,7 @@
         <div class="item item-divider">
           <i class="icon ion-ios-location-outline"></i> Osoite
         </div>
-        <a ng-repeat="address in detail.addresses | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!address.endDate&&address.street" class="item address" href>
+        <a ng-repeat="address in detail.addresses | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!address.endDate&&address.street" class="item address" href="http://maps.google.com/?q={{address.street}}+{{address.postCode}}+{{address.city}}" target="_blank">
           <span class="title">{{address.street}}</span>
           {{address.postCode}} {{address.city}}
         </a>
