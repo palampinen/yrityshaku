@@ -1,0 +1,45 @@
+<ion-view view-title="Y-tunnuksella">
+  <ion-content>
+
+  <form class="yritys-form">
+    <div class="list">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="nimi" placeholder="Yrityksen Y-tunnus">
+        </label>
+        <button ng-click="getYritys(nimi)" class="button button-positive button-outline button-small icon ion-ios-search">
+          Hae
+        </button>
+      </div>
+
+    </div>
+  </form>
+
+
+  <div class="loader" ng-if="loading">
+    <ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>
+  </div>
+
+
+  <span ng-show="noresults" class="fade-in no-results">Ei tuloksia</span>
+
+  <ion-list ng-show="!loading" class="result-list">
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="(id,yritys) in yritykset" type="item-text-wrap" href ng-click="openYritys(id)">
+      <!-- <img ng-src="{{chat.face}}"> -->
+      <i class="itemicon ion-ios-world-outline"></i>
+
+      <h2>{{yritys.name}}</h2>
+      <p>{{yritys.businessId}}</p>
+
+      <i class="icon ion-ios-arrow-right light-positive"></i>
+
+    </ion-item>
+  </ion-list>
+
+
+
+
+
+  </ion-content>
+</ion-view>
