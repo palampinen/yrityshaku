@@ -1,0 +1,117 @@
+  .tabs-top > .tabs, .tabs.tabs-top {
+    border-bottom: none;
+  }
+.yritys-form {
+      background: url("/img/starter-bg.jpg") no-repeat 50% 50%;
+      background-size: cover;
+      padding: 20px 10px;
+
+      .item-input-inset .item-input-wrapper 
+      {
+        background: rgba(255,255,255,.4);
+        border: none;
+        input{
+          height: 38px;
+          line-height: 40px;
+          font-size: 140%;
+          font-weight: 900;
+          background: transparent;
+          width: 100%;
+          color:#FFF;
+        }
+      }
+      .item {
+        border:none;
+        background:transparent; 
+      }
+      .button.button-positive.button-outline {
+        font-size: 18px;
+        padding: 5px 20px;
+        &:before{font-size: 22px;}
+        &:hover {color:#FFF;}
+      }
+  }
+
+
+@media screen and (min-width: 1024px) {
+  .bar.bar-header .title {font-size: 25px; }
+  .tabs-top > .tabs, .tabs.tabs-top {
+    border-bottom: none;
+    .tab-title {
+      font-size: 20px;
+    }
+  }
+  .yritys-form {
+      background: url("/img/starter-bg.jpg") no-repeat 50% 50%;
+      background-size: cover;
+      padding: 75px 20px;
+
+      .item-input-inset .item-input-wrapper 
+      {
+        background: rgba(255,255,255,.5);
+        border: none;
+        input{
+          height: 64px;
+          line-height: 70px;
+          font-size: 170%;
+          font-weight: 900;
+          background: transparent;
+          width: 100%;
+          text-align: center;
+          color:#FFF;
+        }
+      }
+      .item {
+        border:none;
+        background:transparent; 
+      }
+      .button.button-positive.button-outline {
+        font-size: 23px;
+        padding: 18px 30px;
+        &:before{font-size: 30px;}
+        &:hover {color:#FFF;}
+      }
+  }
+
+  .loader {
+    text-align: center;
+    margin: 25px 0;
+    svg {width: 75px;height:75px;}
+  }
+  .no-results {font-size: 30px; margin: 25px 0;font-weight: 100;}
+
+  .result-list {
+    .item {
+      &:hover .item-content{
+        background: rgba(0,0,0,.08);
+      }
+      &.item-avatar {
+        .item-content {padding-left:80px;}
+
+        .itemicon {
+           top:20px;
+           font-size: 60px;
+        }
+      }
+      &.item-icon-right .icon {font-size: 50px;}
+      h2 {margin-bottom:10px; font-size: 30px;font-weight: 100;color:#444}
+      p {font-size: 20px;}
+    }
+  }
+
+  .yritys-detail {
+    .item {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .item-divider {
+      text-align: left;
+      padding: 15px 30px;
+    }
+  }
+  #map {
+    height: 400px;
+  }
+
+}

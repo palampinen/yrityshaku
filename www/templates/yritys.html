@@ -1,0 +1,60 @@
+  <ion-modal-view class="start-modal yritys-detail-modal">
+
+    <ion-header-bar class="bar-positive">
+
+      <div class="buttons buttons-left">
+        <span class="left-buttons">
+        <button class="button button-icon button-clear ion-ios-arrow-up button-rotate" ng-click="close()"></button>
+        </span>
+      </div>
+
+      <h1 class="title">{{detail.name}}</h1>
+    </ion-header-bar>
+
+
+    <ion-content class="fullheight" >
+
+      <div class="list yritys-detail">
+
+
+        <!-- Main Section -->
+        <div class="item main-item">
+          
+          <span class="businessId" >{{detail.businessId}}</span>
+
+          <span class="businessLine" ng-repeat="line in detail.businessLines | filter:{language:LANG} " ng-if="!form.endDate" >
+            {{line.name}}
+          </span>
+
+        </div>
+      </div>
+
+      <div id="map" ng-if="showMap"></div>
+
+      <div class="list yritys-detail">
+        <!-- Yhteystiedot -->
+        <div class="item item-divider">
+          <i class="icon ion-ios-telephone-outline"></i> Yhteystiedot
+        </div>
+        <a ng-repeat="contact in detail.contactDetails | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!contact.endDate&&contact.value" class="item" href="{{contact.value}}" target="_blank">
+          <span class="title">{{contact.type}}</span>
+          {{contact.value}}    
+        </a>
+
+        <div class="item item-divider">
+          <i class="icon ion-ios-location-outline"></i> Osoite
+        </div>
+        <a ng-repeat="address in detail.addresses | filter: { language: 'FI' } | orderBy:'registrationDate':true" ng-if="!address.endDate&&address.street" class="item address" href>
+          <span class="title">{{address.street}}</span>
+          {{address.postCode}} {{address.city}}
+        </a>
+
+
+      </div>
+
+
+
+
+    </ion-content>
+
+  </ion-modal-view>

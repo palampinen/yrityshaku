@@ -1,0 +1,235 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #38C9AA !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+
+$border-radius-base:              0px !default;
+$border-radius-large:             0px !default;
+$border-radius-small:             0px !default;
+$button-border-radius:            0px !default;
+$button-border-width:             2px !default;
+
+$font-family-sans-serif:          "Helvetica Neue", "RotoboDraft","Roboto", "Segoe UI", sans-serif !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+@mixin vh-middle() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.light-positive {color:lighten($positive,10%);}
+
+
+
+.bar.bar-header {
+    -webkit-box-shadow:none !important; 
+    box-shadow:none !important;
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none;
+    border-bottom: none;
+}
+
+.tabs-striped.tabs-positive {
+
+  .tab-item{
+    font-weight: bold;
+    color:rgba(0,0,0,.45);
+    text-transform: uppercase;
+    max-width: none;
+  }
+}
+
+.fullheight .scroll {
+  min-height: 100%;
+}
+
+// START PAGE
+
+
+@keyframes round {
+    from {transform:rotate(1deg);opacity: 0.5 }
+    to {transform:rotate(720deg);opacity: 1; }
+}
+
+@-webkit-keyframes round {
+    from {-webkit-transform:rotate(1deg); opacity: 0.5;}
+    to {-webkit-transform:rotate(720deg);opacity: 1; }
+}
+
+
+#start {
+  color:#FFF;
+  background-image: url('/img/starter.jpg');
+  background-size: cover;
+  background-position: 55% 0;
+
+  &>.scroll-content {
+    background: rgba(29,53,48,.3);
+  }
+
+  h1 {font-weight: 900; color:#FFF;text-align: center;margin-bottom: 20px;
+    img {
+      max-width: 250px;
+      width: 50%;
+      display: block;
+      margin: -20px auto; 
+
+      transform:rotate(0);
+      animation:round 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+      -webkit-animation:round 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+
+     }
+  }
+
+  .button.button-light.button-outline {border-color:rgba(255,255,255,.666); color:#FFF; text-transform: uppercase;font-weight: 900;border-radius: 0;border-width: 1px; max-width: 300px;margin:0 auto;
+    &:hover,&:active,&.activated {background: rgba(255,255,255,.05);}
+  }
+  .contentbox {
+    width: 100%;
+    @include vh-middle();
+  }
+}
+
+.start-modal {
+  width: 100%;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+// SEARCH YRITYS
+.yritys-form{
+  .item {
+    border-bottom: 0;
+    border-top:0;
+  }
+  .item-input-wrapper {border-radius: 0;-webkit-border-radius:0; border:1px solid #EEE;
+    position: relative;
+  }
+  .clearbtn {color:#FFF;z-index: 9; font-size: 30px; padding:0; line-height:43px; margin:0 0 0 10px; position: relative;}
+}
+
+.loader {text-align: center;
+  margin: 10px 0;
+  svg {width: 44px;height: 44px;}
+}
+.no-results {text-align: center;display:block; margin: 15px 0;color:#aaa;}
+
+// LIST YRITYKSET
+
+.item-avatar {
+  .itemicon {left:15px;top:12px; color:$positive; font-size: 50px;position: absolute;}
+}
+
+
+.result-list {
+  .item {
+    border: none;
+    &:nth-child(2n), &:nth-child(2n) .item-content {
+      background: #fafafa;
+
+    }
+  }
+}
+
+#map {width: 100%; height: 350px;}
+
+// DETAIL YRITYS
+
+@keyframes rotate {
+    from {transform:rotate(0deg) }
+    to {transform:rotate(180deg) }
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform:rotate(0deg) }
+    to {-webkit-transform:rotate(180deg) }
+}
+
+
+.button-rotate {
+
+  animation:rotate 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-animation:rotate 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform:rotate(180deg);
+}
+
+
+.yritys-detail-modal {
+  background: lighten($positive,12%);
+}
+.yritys-detail {
+
+
+  .title {
+    display: block;
+    color:#FFF;
+    text-transform: uppercase;
+    font-size: 70%;
+    font-weight: 900;
+
+  }
+
+  .item {
+    border: none;
+    background: lighten($positive,12%);
+    p {color:#777;} 
+  }
+
+  .item-divider {
+    border-bottom: 3px solid rgba(255,255,255,.3) !important;
+
+    color:#fff;
+    padding: 10px 10px;
+    font-weight: 900;
+    font-size: 120%;
+    .icon {margin-right: 10px;font-size: 120%;}
+  }
+
+  .main-item {
+    padding: 10px 0 20px;
+    border:none;
+    background: lighten($positive,12%);
+    color:#FFF;
+    text-align: center;
+    span {
+      margin: 20px auto 10px;
+      display: block;
+      &.businessId { font-size: 120%;}
+      &.businessLine { font-weight: 900;color:rgba(0,0,0,.4); font-size: 80%;}
+    }
+  }
+
+
+
+}
+
+
+@import "scss/import/desktop.scss";
