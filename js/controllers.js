@@ -31,12 +31,14 @@ angular.module('starter.controllers', [])
 .controller('NimiCtrl', function($scope,$ionicModal,YTJ,$location,$timeout) {
 
   $scope.LANG = 'FI';
-
+  $scope.searched = false;
 
   $scope.getYritys = function(nimi){
     if(!nimi) return;
+
     $scope.noresults = false;
     $scope.loading = true;
+    $scope.searched = true;
     $scope.yritykset = [];
 
     if( $location.path().indexOf('ytunnus') >= 0 ){
