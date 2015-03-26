@@ -7820,7 +7820,7 @@ a.button {
   .yritys-form {
     background: url("../img/starter-bg.jpg") no-repeat 50% 50%;
     background-size: cover;
-    padding: 75px 20px; }
+    padding: 85px 20px; }
     .yritys-form .item-input-inset .item-input-wrapper {
       background: rgba(255, 255, 255, 0.5);
       border: none; }
@@ -7870,12 +7870,17 @@ a.button {
   .result-list .item p {
     font-size: 20px; }
   .yritys-detail .item {
-    max-width: 800px;
+    max-width: none;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    font-size: 160%;
+    line-height: 1.5;
+     }
   .yritys-detail .item-divider {
-    text-align: left;
-    padding: 15px 30px; }
+    text-align: center;
+    font-weight: 100;
+    font-size:200%;
+    padding: 15px 30px 5px; }
   #map {
     height: 400px; } }
 
